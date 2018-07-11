@@ -37,3 +37,5 @@
 >3.settings.py配置IMAGES_URL，DATABASES(数据库)， CACHES(Redis服务器)<br/>
 
 >4.项目启动<br/>
+
+>5.后台地址：域名/YiqiAdmin0001shujian/<br/>
