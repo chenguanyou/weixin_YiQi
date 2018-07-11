@@ -1,0 +1,141 @@
+/*即将开始的模板  */
+
+/*即将开始  */
+
+.the_start {
+  display: flex;
+  flex-direction: column;
+}
+
+.the_top_view {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.the_start_image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.the_start_text {
+  /* display:flex; */
+  font-size: 30rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.the_right_image {
+  width: 30rpx;
+  height: 30rpx;
+  float: right;
+  position: absolute;
+  justify-content: center;
+  right: 20rpx;
+  vertical-align: middle;
+  margin-top: 5px;
+}
+
+.fengexian {
+  border-bottom: 1px solid #ededed;
+}
+
+/*即将开始内容  */
+
+.start_content_view {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+}
+
+.start_content_views {
+  display: flex;
+  flex-direction: row;
+}
+
+.start_content_image image {
+  width: 300rpx;
+  height: 190rpx;
+  margin-right: 10rpx;
+  /* -webkit-filter:brightness(5); *//* -webkit-filter:blur(3px); */
+}
+
+.start_content_image text {
+  /* display: flex;
+  position: absolute;
+  justify-content: center;
+  font-size: 25rpx;
+  margin-top: -50rpx;
+  margin-left: 10rpx;
+  color: #fff; */
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  font-size: 25rpx;
+  margin-top: -65rpx;
+  /* margin-left:10rpx; */
+  color: #fff;
+  background: #000;
+  padding: 10rpx;
+  opacity: 0.8;
+  border-top-right-radius: 15rpx;
+  /* border-radius:11rpx; */
+}
+
+.start_content_image1 {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin-top: -5rpx;
+  right: 15rpx;
+}
+
+.start_content_image1 image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.start_content_view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start_content_title {
+  font-size: 38rpx;
+  color: #000;
+  display: block;
+  display: -webkit-box;
+  width: 360rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+.start_content_prompt {
+  font-size: 38rpx;
+  color: #999;
+  font-weight: bold;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+}
+
+.start_content_day {
+  color: red;
+}
+
+.start_content_when {
+  color: red;
+}
+
+.start_content_points {
+  color: red;
+}

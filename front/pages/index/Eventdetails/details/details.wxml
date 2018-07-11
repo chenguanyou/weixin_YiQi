@@ -1,0 +1,27 @@
+<!--pages/index/Eventdetails/details/details.wxml-->
+<view class='details_view'>
+  <!--活动介绍  -->
+  <view class='details_view_details_view'>
+    <view class='details_view_details_images_view'>
+      <image src='../../../../images/icon/xiangqing.png'></image>
+      <text>活动介绍</text>
+    </view>
+    <view class='details_view_details_text_view'>
+      <text>{{content}}</text>
+    </view>
+  </view>
+  <!--活动介绍  -->
+  <!--活动图片  -->
+  <view class='details_view_details_view'>
+    <view class='details_view_details_images_view'>
+      <image src='../../../../images/icon/hdtupian.png'></image>
+      <text>活动图片</text>
+    </view>
+    <block wx:for="{{activity_images}}" wx:key>
+      <view class='details_view_details_text_view'>
+        <image src='{{item.image}}' mode="widthFix"></image>
+      </view>
+    </block>
+  </view>
+  <!--活动图片  -->
+</view>

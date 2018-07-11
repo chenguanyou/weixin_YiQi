@@ -1,0 +1,80 @@
+<!--page/meuser/gerenxinxi/gerenxinxi.wxml-->
+<view class='gerenxinxi_view'>
+
+  <view class='gerenxinxi_view_touxiang'>
+    <text>头像</text>
+    <view class='gerenxinxi_view_touxiang_images' catchtap='huanbeijing' data-type='GHTX'>
+      <image class='touxiang_images' mode="aspectFill" src='{{avatar}}'></image>
+      <image class='touxiang_xiugaitishi' src='../../../images/icon/nextbm.png'></image>
+    </view>
+  </view>
+
+  <view class='gerenxinxi_view_touxiang'>
+    <text>昵称</text>
+    <view class='gerenxinxi_view_touxiang_images' bindtap='new_nametap' data-nametitle='昵称' data-userdata='{{name}}'>
+      <text>{{name}}</text>
+      <image class='touxiang_xiugaitishi' src='../../../images/icon/nextbm.png'></image>
+    </view>
+  </view>
+
+  <view class='gerenxinxi_view_touxiang'>
+    <text>性别</text>
+    <view class='gerenxinxi_view_touxiang_images'>
+      <!-- <text>{{user_info.gender}}</text>
+      <image class='touxiang_xiugaitishi' src='../../../images/icon/nextbm.png'></image> -->
+      <picker class='gerenxinxi_view_touxiang_images_sr' data-type='GHXB' range='{{XINGBIE_STR}}' range-key="{{'name'}}" value="{{gender}}" bindchange="XINGBIE">{{gender}}
+        <image class='touxiang_xiugaitishi' src='../../../images/icon/nextbm.png'></image>
+      </picker>
+    </view>
+  </view>
+  <view class='gerenxinxi_view_touxiang'>
+    <text>生日</text>
+    <view class='gerenxinxi_view_touxiang_images'>
+      <picker class='gerenxinxi_view_touxiang_images_sr' data-type='GHSRI' mode="date" value="{{birthay}}" end="{{date_end}}" bindchange="bindDateChangess">{{birthay}}
+        <image class='touxiang_xiugaitishi' src='../../../images/icon/nextbm.png'></image>
+      </picker>
+    </view>
+  </view>
+
+  <view class='gerenxinxi_view_touxiang'>
+      <text>签名</text>
+    <view class='gerenxinxi_view_touxiang_images' bindtap='thesignature' data-nametitle='签名'>
+      <text>{{thesignature==''?'还没有设置个人签名。':thesignature}}</text>
+      <image class='touxiang_xiugaitishi' src='../../../images/icon/nextbm.png'></image>
+    </view>
+  </view>
+
+  <view class='gerenxinxi_view_touxiang'>
+    <text>手机号</text>
+    <view class='gerenxinxi_view_touxiang_images' bindtap='NICHENG_PHONE' data-nametitle='手机号' data-userdata='{{mobile}}'>
+      <text>{{mobile==null?'没有绑定手机':mobile}}</text>
+      <image class='touxiang_xiugaitishi' src='../../../images/icon/nextbm.png'></image>
+    </view>
+  </view>
+
+  <view class='gerenxinxi_view_touxiang'>
+    <text>微信名</text>
+    <view class='gerenxinxi_view_touxiang_images_wx'>
+      <text>{{nickName}}</text>
+    </view>
+  </view>
+
+  <!--昵称修改  -->
+  <modal id="modal" hidden="{{hiddenmodalput}}" data-type='GHNAME' catchtouchmove='true' title="更改昵称" confirm-text="更改" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input style='margin-top:20rpx;' type='text' adjust-position="true" bindinput='new_name' cursor-spacing='70' maxlength='7' value='{{baoming_name}}' placeholder="输入您的新昵称" />
+  </modal>
+  <!--昵称修改  -->
+
+  <!-- 手机号修改  -->
+  <modal id="modal" hidden="{{phonehiddeninput}}" data-type='GHPHONE' catchtouchmove='true' title="更改手机号" confirm-text="更改" cancel-text="取消" bindcancel="cancelphone" bindconfirm="confirmphone">
+    <input style='margin-top:20rpx;' type='number' adjust-position="true" bindinput='new_phones' cursor-spacing='70' maxlength='11' value='{{value_phone}}' placeholder="输入您的新更改手机号" />
+  </modal>
+  <!--手机号修改   -->
+
+  <!-- 签名修改  -->
+  <modal id="modal" hidden="{{thesignatureinput}}" data-type='thesignature' catchtouchmove='true' title="更新个性签名" confirm-text="更改" cancel-text="取消" bindcancel="cancelthesignature" bindconfirm="confirmthesignature">
+    <textarea style='margin-top:20rpx;' type='text' fixed="true" adjust-position="true" class='value_thesignature_content' bindinput='value_thesignature_content' cursor-spacing='70' value='{{value_thesignature}}' placeholder="{{thesignatures}}"
+    />
+  </modal>
+  <!-- 签名修改   -->
+</view>

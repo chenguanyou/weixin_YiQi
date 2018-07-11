@@ -1,0 +1,18 @@
+/* pages/index/allhotactivity/allhotactivity.wxss */
+@import '../../../templates/hotactivity/hotactivity.wxss';
+.hot_content_view1{
+  margin-top: 30rpx;
+}
+.start_content_image10 {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin-left: 235rpx;
+  /* margin-top: -5rpx;
+  right: 15rpx; */
+}
+
+.start_content_image10 image {
+  width: 100rpx;
+  height: 100rpx;
+}

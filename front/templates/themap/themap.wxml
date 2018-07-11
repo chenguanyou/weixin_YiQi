@@ -1,0 +1,12 @@
+<template name='themap'>
+  <view class='hotactivity_views'>
+    <view class='allactivict_view' style='margin-botton:20rpx;'>
+      <image src='../../images/icon/ditumoshi.png' class='hotactivity_start_image'></image>
+      <text class='hotactivity_start_text'>地图模式</text>
+      <image src='../../images/icon/ditu.png' class='hotactivity_right_image' catchtap='mapmode'></image>
+    </view>
+    <!--分割线  -->
+    <view class='fengexian' style='margin-top: 20rpx;'></view>
+    <!--分割线  -->
+  </view>
+</template>

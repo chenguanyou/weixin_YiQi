@@ -1,0 +1,42 @@
+<!--pages/index/Eventdetails/reguser/reguser.wxml-->
+<view class='reguser_views'>
+  <block wx:for="{{register}}" wx:key>
+    <!--报名用户  -->
+    <view class='reguser_views_user_views'>
+      <!-- 头像 -->
+      <view class='reguser_views_user_images_view'>
+        <image mode="aspectFill" class='reguser_views_user_images_view_images' src='{{item.user.avatar}}'></image>
+      </view>
+      <!--头像  -->
+      <!--用户名和签名  -->
+      <view class='reguser_views_user_text_view'>
+        <view class='reguser_male_views'>
+          <text class='reguser_views_user_text_name'>{{item.user.name}}</text>
+          <!--性别图标 这里如果是女人就显示女人../../../../images/icon/female.png -->
+          <image  class='reguser_male_views_images' src="{{item.user.gender==1?'../../../../images/icon/male.png':'../../../../images/icon/female.png'}}"></image>
+          <!--性别图标  -->
+        </view>
+        <view class='reguser_male_views'>
+          <text class='reguser_views_user_text_centent'>{{item.user.thesignature}}</text>
+        </view>
+      </view>
+      <!--用户名和签名  -->
+      <!--查看报名信息  -->
+      <view class='reguser_info_view'>
+        <text class='reguser_info_view_text' catchtap='info' data-wechat='{{item.wechat}}' data-username='{{item.username}}'>报名信息</text>
+        <text class='sssss'>{{item.type}}</text>
+      </view>
+      <!--查看报名信息  -->
+    </view>
+    <!--报名用户  -->
+  </block>
+  <!--分享二维码图片弹框  -->
+  <view class='sharing_view' hidden='{{sharing_view}}' catchtouchmove='true'>
+    <view class='user_info_view'>
+      <text>姓名: {{username}}</text>
+      <text selectable='true'>微信: {{wechat}}</text>
+    </view>
+    <view class="mask" catchtap="outbtn" wx:if="{{showModal}}"></view>
+  </view>
+  <!--分享二维码图片弹框  -->
+</view>

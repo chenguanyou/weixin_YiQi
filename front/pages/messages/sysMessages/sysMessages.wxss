@@ -1,0 +1,103 @@
+/* pages/messages/sysMessages/sysMessages.wxss */
+
+Page {
+  background: #ededed;
+}
+
+.sysmessages_view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.centent_view {
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  /* padding: 30rpx; */
+  margin-top: 20rpx;
+  border-radius: 15rpx;
+  width: 95%;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.date text {
+  font-size: 25rpx;
+  color: #ccc;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+
+.title text {
+  font-size: 32rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  margin-right:20rpx;
+}
+
+.content text {
+  font-size: 27rpx;
+  color: #999999;
+  font-weight: 400;
+}
+
+.IMAGE {
+  /* margin-top: 20rpx; */
+  border-radius: 15rpx;
+}
+
+.IMAGE image {
+  height: 330rpx;
+  /* border-radius: 15rpx; */
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  width: 100%;
+}
+
+.footer_view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  position: fixed;
+  font-size: 33rpx;
+  z-index: 10000;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  border-top: 1px solid #ccc;
+}
+
+.footer_view view {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  color:#666666;
+  font-size: 28rpx;
+  /* font-weight: 480 */
+}
+.jiexian{
+  margin-top: 160rpx;
+}

@@ -1,0 +1,81 @@
+<!-- /*即将开始的模板样式  */ -->
+<template name='the_start'>
+  <!--即将开始的活动  -->
+  <view class='the_start'>
+    <!--即将开始提示  -->
+    <view class='the_top_view'>
+      <image src='../../images/icon/start0.png' class='the_start_image'></image>
+      <text class='the_start_text'>即将开始</text>
+      <image src='../../images/icon/right_image.png' class='the_right_image' catchtap='all_thestart'></image>
+    </view>
+    <!--即将开始提示  -->
+
+    <!--即将开始内容  -->
+    <view wx:for="{{startDateList}}" wx:key class='start_content_view'>
+      <view class='start_content_views' data-activityid="{{item[0].id}}" catchtap='xiangqing'>
+        <view class='start_content_image1'>
+          <image src='../../images/icon/start1.png'></image>
+        </view>
+        <view class='start_content_image'>
+          <image mode='aspectFill' src='{{item[0].cover_image}}'></image>
+          <text>已报名：{{item[0].registration_number}}人</text>
+        </view>
+        <view class='start_content_view'>
+          <text class='start_content_title'>{{item[0].title}}</text>
+          <text class='start_content_prompt'>距离开始</text>
+          <view>
+            <text class='start_content_day'>{{item[1].day}}</text>
+            <text>天</text>
+            <text class='start_content_when'>{{item[1].when}}</text>
+            <text>时</text>
+            <text class='start_content_points'>{{item[1].points}}</text>
+            <text>分</text>
+            <text class='start_content_points'>{{item[1].seconds}}</text>
+            <text>秒</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--即将开始内容  -->
+    <!--分割线  -->
+    <view class='fengexian'></view>
+    <!--分割线  -->
+  </view>
+  <!--即将开始的活动  -->
+</template>
+
+<!--即将开始的内容  -->
+<template name='thestart_content'>
+  <!--即将开始内容  -->
+  <block wx:for="{{startDateList}}" wx:key>
+  <view class='start_content_view' data-activityid="{{item[0].id}}" catchtap='xiangqing'>
+    <view class='start_content_views'>
+      <view class='start_content_image1'>
+        <image src='../../../images/icon/start1.png'></image>
+      </view>
+      <view class='start_content_image'>
+        <image mode='aspectFill' src='{{item[0].cover_image}}'></image>
+        <text>已报名：{{item[0].registration_number}}人</text>
+      </view>
+      <view class='start_content_view'>
+        <text class='start_content_title'>{{item[0].title}}</text>
+        <text class='start_content_prompt'>距离开始</text>
+        <view>
+          <text class='start_content_day'>{{item[1].day}}</text>
+          <text>天</text>
+          <text class='start_content_when'>{{item[1].when}}</text>
+          <text>时</text>
+          <text class='start_content_points'>{{item[1].points}}</text>
+          <text>分</text>
+          <text class='start_content_points'>{{item[1].seconds}}</text>
+          <text>秒</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--即将开始内容  -->
+  <!--分割线  -->
+  <view class='fengexian'></view>
+  <!--分割线  -->
+  </block>
+</template>

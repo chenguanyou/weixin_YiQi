@@ -1,0 +1,111 @@
+/*热门活动模板样式  */
+
+.hotactivity_view {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.hotactivity_top_view {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.hotactivity_start_image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.hotactivity_start_text {
+  /* display:flex; */
+  font-size: 30rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.hotactivity_right_image {
+  width: 30rpx;
+  height: 30rpx;
+  float: right;
+  position: absolute;
+  justify-content: center;
+  right: 20rpx;
+  vertical-align: middle;
+  margin-top: 5px;
+}
+
+.hot_content_view {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+  align-items: center;
+}
+
+.hot_content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+}
+
+.hot_content_image {
+  width: 334rpx;
+  height: 200rpx;
+  /* -webkit-filter:blur(3px); */
+  /* margin-right: 10rpx; */
+}
+
+.hot_content_text_view {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  margin-top: 129rpx;
+  /* margin-left: 10rpx; */
+  color: #fff;
+  background: #000;
+  width: 334rpx;
+  opacity: 0.8;
+  z-index: 1000;
+}
+
+.hot_content_text_1 {
+  font-size: 28rpx;
+  margin-left: 10rpx;
+  display: block;
+  display: -webkit-box;
+  width: 300rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.hot_content_text_2 {
+  font-size: 22rpx;
+  margin-left: 10rpx;
+  display: block;
+  display: -webkit-box;
+  width: 300rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hot_content_view1 {
+  display: flex;
+  flex-direction: row;
+  /* justify-content:center;  */
+  align-items: center;
+}

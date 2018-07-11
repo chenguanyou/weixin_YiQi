@@ -1,0 +1,4 @@
+<!--pages/index/classification/classification.wxml-->
+<import src='../../../templates/classification/classification.wxml' />
+
+  <template is='classifications' data="{{ActivityType}}" />

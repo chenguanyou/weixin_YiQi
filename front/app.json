@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/drawcode/drawcode",
+    "pages/index/allthestart/allthestart",
+    "pages/index/allhotactivity/allhotactivity",
+    "pages/index/allactivict/allactivict",
+    "pages/index/typeall/typeall",
+    "pages/index/classification/classification",
+    "pages/index/Eventdetails/Eventdetails",
+    "pages/index/Eventdetails/ContentMap/ContentMap",
+    "pages/index/Eventdetails/details/details",
+    "pages/index/Eventdetails/reguser/reguser",
+    "pages/index/mapmode/mapmode",
+    "pages/index/search/search",
+    "pages/release/release",
+    "pages/video/vodeo",
+    "pages/messages/messages",
+    "pages/messages/sysMessages/sysMessages",
+    "pages/user/user",
+    "pages/user/userinfo/userinfo",
+    "pages/user/UserAllActivity/UserAllActivity",
+    "pages/user/userjiaoyin/userjiaoyin",
+    "pages/user/collection/collection",
+    "pages/user/usersingup/usersingup",
+    "pages/user/Advicefeedback/Advicefeedback",
+    "pages/login/login"
+  ],
+  "window": {
+    "navigationBarTitleText": "一起哟",
+    "navigationBarBackgroundColor": "#eb4901"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "selectedColor": "#eb4901",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "活动",
+        "iconPath": "./images/icon/index0.png",
+        "selectedIconPath": "./images/icon/index.png"
+      },
+      {
+        "pagePath": "pages/release/release",
+        "text": "发布",
+        "iconPath": "./images/icon/release0.png",
+        "selectedIconPath": "./images/icon/release.png"
+      },
+      {
+        "pagePath": "pages/messages/messages",
+        "text": "消息",
+        "iconPath": "./images/icon/messages.png",
+        "selectedIconPath": "./images/icon/messages0.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "./images/icon/user0.png",
+        "selectedIconPath": "./images/icon/user.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

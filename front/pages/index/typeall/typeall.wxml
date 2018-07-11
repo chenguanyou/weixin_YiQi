@@ -1,0 +1,4 @@
+<!--pages/index/typeall/typeall.wxml-->
+<import src='../../../templates/allactivict/allactivict.wxml' />
+
+<template is='allactivicts' data="{{all_data}}" />

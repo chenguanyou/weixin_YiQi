@@ -1,0 +1,3 @@
+<view class='sharing_view'>
+  <canvas style="width:750rpx; height:940rpx;" canvas-id="myCanvas" />
+</view>

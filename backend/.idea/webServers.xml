@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ac2e04f7-2fee-463b-b67f-2098930620bc" name="一起呦小程序" url="http://www.goog8.com">
+        <fileTransfer host="www.goog8.com" port="14753" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="14753" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

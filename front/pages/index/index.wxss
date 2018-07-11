@@ -1,0 +1,123 @@
+/*整个页面  */
+@import '../../templates/thenstart/thenstart.wxss';
+@import '../../templates/hotactivity/hotactivity.wxss';
+@import '../../templates/allactivict/allactivict.wxss';
+@import '../../templates/classification/classification.wxss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0rpx 0;
+}
+
+/*幻灯片view宽度  */
+
+.slide_view {
+  width: 100%;
+}
+
+/*活动搜索view  */
+
+.search_activity {
+  flex-direction: row;
+  background: #ededed;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  /* width: 100%; */
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  border-radius: 15rpx;
+  z-index: 10000;
+  opacity: 0.8;
+  right: 0%;
+  left: 0%;
+}
+
+.search_activity0 {
+  flex-direction: row;
+  /* background: #ededed; */
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  /* width: 100%; */
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  border-radius: 15rpx;
+  /* z-index: 10000; */
+  /* opacity: 0.8; */
+  right: 10%;
+  left: 10%;
+}
+
+.search_activity1 {
+  /* flex-direction: row;
+  background: #ededed;
+  display: flex; */
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  /* width: 100%; */
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  /* border-radius: 15rpx; */
+  z-index: 10000;
+  /* opacity: 0.8; */
+  right:0%;
+  /* right: 10%;
+  left: 10%; */
+}
+
+/*活动搜索的背景  */
+
+.search_activity input {
+  /* background: #ededed; */
+  width: 310px;
+  border-radius: 15rpx;
+  /* padding-left: 20rpx; */
+}
+
+/*搜索图标  */
+
+.search_images {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  opacity: 1;
+  vertical-align: middle;
+}
+
+.search_images1 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  opacity: 1;
+  vertical-align: middle;
+}
+
+/*搜索框的样式  */
+
+.search_input {
+  height: 55rpx;
+  border-radius: 15rpx;
+  opacity: 0.7;
+  vertical-align: middle;
+}
+
+/*幻灯片view高度  */
+
+.slide_view swiper {
+  height: 400rpx;
+}
+
+/*幻灯片图片宽度高度  */
+
+.slide_images {
+  width: 100%;
+  height: 400rpx;
+  -webkit-filter:brightness(1.2);
+}

@@ -1,0 +1,57 @@
+<template name='allactivict'>
+  <view>
+    <!--即将开始提示  -->
+    <view class='allactivict_view'>
+      <image src='../../images/icon/allactivict.png' class='hotactivity_start_image'></image>
+      <text class='hotactivity_start_text'>全部活动</text>
+      <image src='../../images/icon/right_image.png' class='hotactivity_right_image' catchtap='allactivict'></image>
+    </view>
+    <!--即将开始提示  -->
+    <view class='hot_content_view'>
+      <!--全部活动开始1  -->
+      <block wx:for="{{all_data.length}}" wx:key>
+        <view class='hot_content_view1' style="{{all_data[item].length == 1? 'display:flex; flex-direction:row; justify-content:none; margin-left:20rpx;':'justify-content:center;'}}">
+          <!--全部活动左  -->
+          <view wx:for="{{all_data[item]}}" wx:if="{{all_data[item]}}" wx:key class='hot_content' style="{{index%2!=0?'margin-left:20rpx;':'margin-right:20rpx;'}}" wx:for-item="items" catchtap='xiangqing' data-activityid='{{items.id}}'>
+            <view class='start_content_image10'>
+              <image src="{{items.judgeStartEnd!=false?'../../images/icon/startdates.png':'../../images/icon/enddates.png'}}"></image>
+            </view>
+            <image mode='aspectFill' src='{{items.cover_image}}' class='hot_content_image'></image>
+            <view class='hot_content_text_view'>
+              <text class='hot_content_text_1'>{{items.title}}</text>
+              <text class='hot_content_text_2'>有{{items.registration_number}}个小伙伴参加</text>
+            </view>
+          </view>
+          <!--全部活动左  -->
+        </view>
+      </block>
+      <!--全部活动开始1   -->
+    </view>
+  </view>
+</template>
+
+
+<template name='allactivicts'>
+  <!--全部活动开始1  -->
+    <block wx:for="{{all_data.length}}" wx:key>
+      <view class='hot_content_view1' style="{{all_data[item].length == 1? 'display:flex; flex-direction:row; justify-content:none; margin-left:20rpx;':'justify-content:center;'}}">
+        <!--全部活动左  -->
+        <view wx:for="{{all_data[item]}}" wx:if="{{all_data[item]}}" wx:key class='hot_content' style="{{index%2!=0?'margin-left:20rpx;':'margin-right:20rpx;'}}" wx:for-item="items" catchtap='xiangqing' data-activityid='{{items.id}}'>
+          <view class='start_content_image10'>
+            <image src="{{items.judgeStartEnd!=false?'../../../images/icon/startdates.png':'../../../images/icon/enddates.png'}}"></image>
+          </view>
+          <image mode='aspectFill' src='{{items.cover_image}}' class='hot_content_image'></image>
+          <view class='hot_content_text_view'>
+            <text class='hot_content_text_1'>{{items.title}}</text>
+            <text class='hot_content_text_2'>有{{items.registration_number}}个小伙伴参加</text>
+          </view>
+        </view>
+        <!--全部活动左  -->
+      </view>
+    </block>
+    <!--全部活动开始1   -->
+    <view wx:if="{{all_data == ''}}" class='no_data_view'>
+      <image src='../../../images/icon/no_search.png'></image>
+      <text>没有找到任何相关的活动...</text>
+    </view>
+</template>

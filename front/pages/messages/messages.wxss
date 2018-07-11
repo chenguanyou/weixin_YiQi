@@ -1,0 +1,61 @@
+/* page/messages/messages.wxss */
+
+.message_view {
+  display: flex;
+  flex-direction: column;
+}
+
+.message_list {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+}
+
+.message_list image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.message_text {
+  /* display: flex; */
+  flex-direction: column;
+  margin-left: 23rpx;
+}
+
+.message_name {
+  font-size: 30rpx;
+}
+
+.message_content {
+  font-size: 27rpx;
+  color: #999;
+  display: block;
+  display: -webkit-box;
+  width: 360rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fengexian {
+  border-bottom: 1px solid #ededed;
+}
+
+.message_length {
+  display: flex; /* 把view容器变成弹性的*/
+  flex-direction: column; /* 按照垂直方向排序 */
+  align-items: center; /* 居中 */
+  position: absolute; /* 浮动 */
+  left: 22%; /*垂直居中的经典方式  */
+  margin-left: -78rpx; /*垂直居中的经典方式  */
+  background: #f00;
+  color: #fff;
+  width: 43rpx;
+  height: 43rpx;
+  border-radius: 100rpx;
+  font-size: 30rpx;
+  justify-content: center;
+  margin-top: 5rpx;
+}

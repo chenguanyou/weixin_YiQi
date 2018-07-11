@@ -1,0 +1,15 @@
+<!--pages/login/login.wxml-->
+<view class='login_views'>
+  <view class='login_log_image_view'>
+    <image src='../../images/icon/login.png'></image>
+    <text class='login_log_image_text'>一起哟需要您的微信授权，才能进行使用。一起哟是一个免费的且永久免费的在线发布活动预约与活动报名的小工具，在您使用之前请您务必认真阅读《使用协议》！</text>
+    <checkbox-group catchtap="checkboxChange" class='login_log_image_text1'>
+      <label class="checkbox">
+        <checkbox value="" checked="" />
+        <text>阅读并同意</text>
+        <text class='login_log_image_text2' catchtap="yuedu" >《使用协议》</text>
+      </label>
+    </checkbox-group>
+  </view>
+  <button class='button' open-type="getUserInfo" bindgetuserinfo='agreeGetUser' disabled='{{disabled}}' >授权</button>
+</view>

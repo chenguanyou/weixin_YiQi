@@ -1,0 +1,32 @@
+<!--pages/messages/sysMessages/sysMessages.wxml-->
+<view class='sysmessages_view'>
+  <!--消息内容  -->
+  <block wx:for="{{message_list}}" wx:key>
+    <view class='date'>
+      <text>{{item.addtime}}</text>
+    </view>
+    <view data-id='{{item.activity.id}}' class='centent_view' catchtap='xiangqing'>
+      <view class='IMAGE'>
+        <image mode="aspectFill" src='{{item.activity.cover_image}}'></image>
+      </view>
+      <view class='title'>
+        <text>{{item.titles}}</text>
+      </view>
+      <view class='content'>
+        <text>{{item.content}}</text>
+      </view>
+    </view>
+  </block>
+  <!--消息内容  -->
+  <view class='jiexian'></view>
+  <!--底部菜单  -->
+  <view class='footer_view'>
+    <block wx:for="{{message_info}}" wx:key>
+      <view style="{{index==1?'border-left: 1px solid #cccccc; border-right: 1px solid #cccccc;padding-right:60rpx;padding-left:60rpx;':''}}">
+        <navigator url="../../../{{item.urls}}" hover-class="none">{{item.themenu_name}}</navigator>
+      </view>
+    </block>
+  </view>
+  <!--底部菜单  -->
+  <!--如果消息为空就显示  -->
+</view>

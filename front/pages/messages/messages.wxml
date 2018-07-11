@@ -1,0 +1,35 @@
+<!--page/messages/messages.wxml-->
+<view class='message_view'>
+  <!--系统消息对象  -->
+    <view class='message_this' catchtap='sysmessages' data-name="{{sysuser_info.sysname}}" data-id='{{sysuser_info.id}}'>
+      <view class='message_length' wx:if="{{sysuser_info.sysmessages.message_len!=0}}">
+        <text class='message_lengths'>{{sysuser_info.sysmessages.message_len==0?'':sysuser_info.sysmessages.message_len}}</text>
+      </view>
+      <view class='message_list'>
+        <image src='{{sysuser_info.images}}' mode="aspectFill"></image>
+        <view class='message_text'>
+          <text class='message_name'>{{sysuser_info.sysname}}</text>
+          <text class='message_content'>{{sysuser_info.sysmessages.message_text}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='fengexian'></view>
+  <!--系统消息对象  -->
+  <!--真实用户消息对象  -->
+  <block wx:for="{{MESSAGE_USER}}" wx:key>
+    <view class='message_this' catchtap='userss_message' data-messid='{{item.id}}' data-userid='{{item.user.userid}}'>
+      <view class='message_length' hidden='{{item.user.hidden}}'>
+        <text class='message_lengths'>{{item.user.message_num}}</text>
+      </view>
+      <view class='message_list'>
+        <image src='{{item.user.avatar}}' mode="aspectFill"></image>
+        <view class='message_text'>
+          <text class='message_name'>{{item.user.name}}</text>
+           <text class='message_content'>{{item.user.message_content}}</text> 
+        </view>
+      </view>
+    </view>
+    <view class='fengexian'></view>
+  </block>
+  <!--真实用户消息对象  -->
+</view>

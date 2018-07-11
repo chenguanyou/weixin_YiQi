@@ -1,0 +1,51 @@
+<template name='classification'>
+  <!--分类提示  -->
+  <view class='hotactivity_view'>
+    <image src='../../images/icon/classification.png' class='hotactivity_start_image'></image>
+    <text class='hotactivity_start_text'>活动分类</text>
+    <image src='../../images/icon/right_image.png' class='hotactivity_right_image' catchtap='classification'></image>
+  </view>
+  <!--分类提示  -->
+  <view class='hot_content_view'>
+    <!--分类开始1  -->
+    <block wx:for="{{ActivityType.length}}" wx:key>
+      <view class='hot_content_view1' wx:if="{{item<2}}">
+        <!--分类开始1  -->
+        <view wx:for="{{ActivityType[item]}}" class='hot_content' wx:for-item="items" wx:if="{{ActivityType[item]}}" style="{{index%2!=0?'margin-left:20rpx;':'margin-right:20rpx;'}}" data-activityid='{{items.id}}' data-activityname='{{items.name}}' wx:key data-classificationsid='{{items.id}}'
+          wx:key catchtap='activity_list'>
+          <image mode='aspectFill' src='{{items.cover_image}}' class='hot_content_image'></image>
+          <view class='hot_content_text_view'>
+            <text class='hot_content_text_1'>{{items.name}}</text>
+            <text class='hot_content_text_2'>{{items.Introduction}}</text>
+          </view>
+        </view>
+        <!--分类开始1  -->
+      </view>
+    </block>
+  </view>
+  <!--分割线  -->
+  <view class='fengexian'></view>
+  <!--分割线  -->
+</template>
+
+
+<template name='classifications'>
+  <!--分类开始1  -->
+  <view class='hot_content_views01'>
+    <!--分类开始1  -->
+    <block wx:for="{{ActivityType.length}}" wx:key>
+      <view class='hot_content_view1'>
+        <!--分类开始1  -->
+        <view wx:for="{{ActivityType[item]}}" class='hot_content' wx:for-item="items" wx:if="{{ActivityType[item]}}" style="{{index%2!=0?'margin-left:20rpx;':'margin-right:20rpx;'}}" data-activityname='{{items.name}}' data-classificationsid='{{items.id}}' wx:key
+          catchtap='activity_list'>
+          <image mode='aspectFill' src='{{items.cover_image}}' class='hot_content_image'></image>
+          <view class='hot_content_text_view'>
+            <text class='hot_content_text_1'>{{items.name}}</text>
+            <text class='hot_content_text_2'>{{items.Introduction}}</text>
+          </view>
+        </view>
+        <!--分类开始1  -->
+      </view>
+    </block>
+  </view>
+</template>

@@ -1,0 +1,46 @@
+/* pages/user/Advicefeedback/Advicefeedback.wxss */
+.feeback_view{
+  display: flex;
+  flex-direction: column;
+}
+.feback_title_view{
+  /* border: 1px solid #ededed; */
+  border-top: 1px solid #ededed;
+  /* margin-top: 20rpx */
+}
+.feback_title_view input{
+  font-size: 30rpx;
+  padding: 20rpx;
+}
+.feback_title_view textarea{
+  font-size: 30rpx;
+  padding: 20rpx;
+}
+.feeback_images_view{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ededed;
+}
+.feeback_images_view text{
+  font-size: 28rpx;
+  color: #999999;
+  padding: 20rpx;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+.feeback_images_view image{
+  width: 150rpx;
+  height: 150rpx;
+  padding: 20rpx;
+}
+.feback_button_view{
+  display: flex;
+  margin-top: 30rpx;
+  flex-direction: row;
+}
+.feback_button_view button{
+  color: #FFFFFF;
+  background: #eb4901;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}

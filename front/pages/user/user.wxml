@@ -1,0 +1,50 @@
+<!-- <import src="../../templates/footer/footer.wxml" /> -->
+<view class='user_views'>
+  <view class='user_view_beijing_view'>
+    <image class='user_view_beijing_view_images' mode="aspectFill" src='{{background}}'></image>
+  </view>
+  <image class='huanbeijingtishi' src='../../images/icon/huanbeijing.png' catchtap='huanbeijing' data-type='GHBJ'></image>
+  <view class='user_view_touxiang_view'>
+    <image mode="aspectFill" style='border-radius:100rpx;' class='user_view_touxiang_view_images' src='{{avatar}}' catchtap='huanbeijing' data-type='GHTX'></image>
+    <view>
+      <text class='user_view_touxiang_view_name'>{{name}}</text>
+      <image class='mail_views' src="{{gender=='男'?'../../images/icon/male.png':'../../images/icon/female.png'}}"></image>
+    </view>
+    <text class='user_view_touxiang_view_signature'>{{thesignature==''?'还没有设置个人签名。':thesignature}}</text>
+  </view>
+  <!-- <view class='mail_view'>
+    <image src='../../images/icon/male.png'></image>
+  </view> -->
+  <view class='user_xuanxiang_list_view'>
+    <!--订单列表  -->
+    <view class='tools_list'>
+      <view catchtap='wodexinxi'>
+        <image src='../../images/icon/shangchengorder.png'></image>
+        <text>我的信息</text>
+      </view>
+      <view catchtap='wofabude'>
+        <image src='../../images/icon/yuekeorder.png'></image>
+        <text>我发起的</text>
+      </view>
+      <view catchtap='liulanjilu'>
+        <image src='../../images/icon/liulanjilu.png'></image>
+        <text>浏览记录</text>
+      </view>
+    </view>
+    <view class='tools_list'>
+      <view catchtap='collection'>
+        <image src='../../images/icon/kaorder.png'></image>
+        <text>我收藏的</text>
+      </view>
+      <view catchtap='wodebaoming'>
+        <image src='../../images/icon/shijiaoorder.png'></image>
+        <text>我加入的</text>
+      </view>
+      <view catchtap='Advicefeedback'>
+        <image src='../../images/icon/yuyueorder.png'></image>
+        <text>意见反馈</text>
+      </view>
+    </view>
+    <!--订单列表  -->
+  </view>
+</view>

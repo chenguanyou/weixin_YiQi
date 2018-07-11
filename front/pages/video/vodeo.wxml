@@ -1,0 +1,48 @@
+<!--pages/video/vodeo.wxml-->
+<view class='video_top'>
+  <!--头  -->
+  <view class='top_top_view'>
+    <image mode="aspectFill" src='http://img06.tooopen.com/images/20180530/tooopen_sy_241494186934.jpg'></image>
+    <view class='top_view'>
+      <text>点滴快乐，随时记录！</text>
+      <!-- <button>发布</button> -->
+    </view>
+  </view>
+  <!--头  -->
+  <!--动态内容区域  -->
+  <!--占位行-->
+  <view class="lie"></view>
+  <!--内容  -->
+  <view class='content_view'>
+    <!--内容1开始  -->
+      <view class='user_content'>
+        <view>
+          <image src='http://img06.tooopen.com/images/20180530/tooopen_sy_241494186934.jpg' mode="aspectFill" class='avatar'></image>
+        </view>
+        <view class='content'>
+          <view>
+            <text class='user_name'>书剑</text>
+          </view>
+          <text class='user_centent'>实时分享您的活动过程，获取TA们的点赞</text>
+          <view class='content_image'>
+              <image mode="{{item.dynamin_style[1]}}" style='{{item.dynamin_style[0]}}' src='http://img06.tooopen.com/images/20180530/tooopen_sy_241494186934.jpg' data-src="{{items.images}}" data-id='{{id}}' bindtap="previewImage"></image>
+          </view>
+          <text class='address_s'>北京市朝阳区</text>
+          <view class='content_foot'>
+            <text class='content_date'>2018-10-20</text>
+            <text class='content_del' data-delid='{{item.id}}' data-id='{{id}}' catchtap='bindDele' hidden='{{item.user[2][1]}}'>删除</text>
+            <view catchtap='user_live' data-live='{{item.id}}' data-id='{{id}}'>
+              <!--yidianzhan.png  -->
+              <image src="{{item.user_like == true ? '../../images/icon/yidianzhan.png':'../../images/icon/dianzhan.png'}}"></image>
+              <text>10</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!--占位行-->
+      <view class="fengexian"></view>
+      <!--内容1开始  -->
+  </view>
+  <!--内容  -->
+  <!--动态内容区域  -->
+</view>

@@ -1,0 +1,4 @@
+<!--pages/index/allhotactivity/allhotactivity.wxml-->
+<import src='../../../templates/hotactivity/hotactivity.wxml' />
+
+<template is='allhotactivity' data="{{Registration_data}}" />

@@ -1,0 +1,247 @@
+/* pages/release/release.wxss */
+
+.release_view {
+  display: flex;
+  flex-direction: column;
+}
+
+.the_cover_view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 30rpx; */
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 10rpx;
+}
+
+.the_cover_view_images {
+  /* width: 100%; */
+  height: 380rpx;
+  /* margin-bottom: 20rpx; */
+}
+
+.the_cover_view_text {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.the_content_view {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ededed;
+}
+
+.the_content_title_view {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #ededed;
+}
+
+.the_content_title_view image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+.the_content_title_view input {
+  vertical-align: middle;
+}
+
+.the_content_content {
+  margin: 20rpx;
+  padding-bottom: 20rpx;
+  /* border-bottom: 1px solid #ededed; */
+}
+
+.the_content_content textarea {
+  width: 100%;
+  font-size: 28rpx;
+}
+
+.the_content_add_images_view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid #ededed;
+}
+
+.the_content_add_images_view image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.the_content_add_images_view text {
+  float: righe;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.release_start_data_view {
+  flex-direction: row;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 20rpx;
+}
+
+.release_start_data_view_image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.release_start_data_view_data {
+  vertical-align: middle;
+  font-size: 30rpx;
+  /* float: right; *//* margin-right: 20rpx; */
+}
+
+.release_start_data_view_image1 {
+  width: 40rpx;
+  height: 40rpx;
+  /* float: right; */
+  vertical-align: middle;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+
+.release_start_data_view_right {
+  float: right;
+}
+
+.release_start_data_view_text {
+  vertical-align: middle;
+  font-size: 30rpx;
+}
+
+.address_view {
+  /* display: flex; */
+  flex-direction: row;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 20rpx;
+  font-size: 30rpx;
+}
+
+.address_view text {
+  vertical-align: middle;
+}
+
+.address_view image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.address {
+  flex-direction: row;
+  float: right;
+  display: block;
+}
+
+.address input {
+  flex-direction: row;
+  float: right;
+}
+
+.address image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.address text {
+  vertical-align: middle;
+}
+
+.user_infos {
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+}
+
+.user_name_view {
+  flex-direction: row;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  font-size:30rpx;
+}
+
+.user_name_view image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.user_name_view text {
+  vertical-align: middle;
+}
+
+.user_name_view view {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  vertical-align: middle;
+}
+
+.user_name_view view image {
+  vertical-align: middle;
+}
+
+.user_name_view view input {
+  float: right;
+  width: 260rpx;
+  vertical-align: middle;
+  /* margin-top: 5rpx; */
+}
+
+.qr_code_view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #ededed;
+  padding: 20rpx;
+}
+
+.qr_code_view image {
+  width: 250rpx;
+  height: 250rpx;
+  font-size: 28rpx;
+}
+
+.qr_code_view text {
+  color: #999;
+}
+
+.yueduxieyi_view {
+  margin: 20rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+}
+
+.xieyi {
+  color: red;
+}
+
+.get_initiate {
+  margin-bottom: 40rpx;
+  background: #eb4901;
+  color: #fff;
+}
+
+.address_text {
+}

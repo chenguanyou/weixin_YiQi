@@ -1,0 +1,19 @@
+@import '../../../templates/allactivict/allactivict.wxss';
+@import '../../../templates/hotactivity/hotactivity.wxss';
+
+.hot_content_view1{
+  margin-top: 30rpx;
+}
+
+.hot_content_views01 {
+  display: flex;
+  flex-direction: column;
+  /* margin: 20rpx; */
+  align-items:center;
+}
+.hot_content_view1{
+   display: flex; 
+  flex-direction: row;
+   /* justify-content:center;  */
+  align-items: center;
+}

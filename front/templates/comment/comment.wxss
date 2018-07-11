@@ -1,0 +1,137 @@
+.comment_view {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment_view_top_view {
+  margin-top: 20rpx;
+  flex-direction: row;
+  border-radius: 20rpx;
+}
+
+.bott_xian_view {
+  border-bottom: 3px solid #eb4901;
+  width: 60rpx;
+  margin-left: 20rpx;
+}
+
+.comment_view_top_view text {
+  color: #eb4901;
+  margin-left: 20rpx;
+  border-radius: 15rpx;
+  /* padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx; */
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.comments_start_views {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.comments_user_avact_view {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.comments_start_user_info_view {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+}
+
+.comments_user_avact {
+  /* margin-top: 15rpx; */
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 100rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.comments_user_text_info_view {
+  display: flex;
+  flex-direction: column;
+  margin-top: -2.3%;
+}
+
+.comments_user_nkname_view {
+  /* display: flex; */
+  flex-direction: row;
+  vertical-align: middle;
+}
+
+.comments_user_nkname_view text {
+  font-size: 26rpx;
+  vertical-align: middle;
+}
+
+.comments_user_nkname_view image {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin-left: 2rpx;
+}
+
+.comments_user_address_date_view {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+}
+
+.comments_user_address_date_view text {
+  font-size: 18rpx;
+  vertical-align: middle;
+}
+
+.comment_centent_view {
+  display: flex;
+  /* margin-top: 20rpx; */
+  margin-bottom: 20rpx;
+  flex-direction: column;
+  margin-left:63rpx;
+}
+
+.comment_centent_view text {
+  font-size: 28rpx;
+}
+
+.comment_bottom_view {
+  /* display: flex; */
+  flex-direction: row;
+  float: right;
+}
+
+.comment_bottom_view view {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  float: right;
+  margin-left: 37rpx;
+}
+
+.comment_bottom_view image {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.comment_bottom_view text {
+  font-size: 23rpx;
+  vertical-align: middle;
+}
+.commends_z{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50rpx;
+  background: #ededed;
+  margin-top: 20rpx;
+}

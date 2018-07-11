@@ -1,0 +1,164 @@
+/* @import '../../templates/footer/footer.wxss'; */
+
+.user_views {
+  display: flex;
+  flex-direction: column;
+}
+
+.user_view_beijing_view {
+  width: 100%;
+  height: 360rpx;
+}
+
+.user_view_beijing_view_images {
+  width: 100%;
+  height: 360rpx;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  -ms-filter: blur(6px);
+  -moz-filter: blur(6px);
+  /* opacity: 0.8; */
+}
+
+.user_view_touxiang_view {
+  display: flex; /* 把view容器变成弹性的*/
+  flex-direction: column; /* 按照垂直方向排序 */
+  align-items: center; /* 居中 */
+  position: absolute; /* 浮动 */
+  top: 20rpx; /* 顶部高度 */
+  width: 100%;
+}
+
+/*换背景图标位置  */
+
+.huanbeijingtishi {
+  display: flex; /* 把view容器变成弹性的*/
+  flex-direction: column; /* 按照垂直方向排序 */
+  align-items: center; /* 居中 */
+  position: absolute; /* 浮动 */
+  right: 5%; /* 垂直居中的经典方式 */
+  margin-right: -5rpx; /* 垂直居中的经典方式 */
+  top: 20rpx; /* 顶部高度 */
+  width: 60rpx;
+  height: 60rpx;
+  z-index:2000;
+}
+
+.user_view_touxiang_view_images {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 100rpx;
+}
+
+.user_view_touxiang_view_name {
+  margin-top: 20rpx;
+  font-size: 38rpx;
+  color: #fff;
+  font-weight:bold;
+  vertical-align: middle;
+}
+
+.user_xuanxiang_list_view {
+  flex-direction: row;
+  margin: 20rpx 20rpx 20rpx 20rpx;
+}
+
+.user_xuanxiang_list_view image {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.user_order_view_text {
+  vertical-align: middle;
+  font-size: 30rpx;
+  font-weight: 403;
+}
+
+.user_order_all {
+  display: table;
+  flex-direction: row;
+  float: right;
+}
+
+.user_order_all text {
+  /* display: table-cell; */
+  vertical-align: middle;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.user_order_all image {
+  vertical-align: middle;
+}
+
+.fengexian {
+  border-bottom: 8px solid #ededed;
+}
+
+.tools_list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  font-weight: 300;
+  justify-content: center;
+}
+
+.tools_list view {
+  display: flex;
+  flex-direction: column;
+  /* margin: 19rpx; */
+  align-items: center;
+  border: 1px solid #ededed;
+  padding: 50rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+
+.tools_list view image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 10rpx;
+}
+
+.zx {
+  border-left: 5px solid #03f;
+  margin-right: 10rpx;
+  border-radius: 100rpx;
+}
+
+.tools_list text {
+  font-size: 27rpx;
+  align-items: center;
+}
+
+.user_view_touxiang_view_signature {
+  font-size: 25rpx;
+  margin-left: 70rpx;
+  margin-right: 70rpx;
+  color: #fff;
+  display: block;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mail_view{
+  align-items:center;
+position:absolute;
+justify-content:center;
+font-size:28rpx;
+margin-top:20rpx;
+z-index:10000;
+right:0%;
+
+}
+.mail_views{
+  width: 33rpx;
+  height: 33rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}

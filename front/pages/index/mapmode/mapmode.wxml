@@ -1,0 +1,2 @@
+<map id="map" longitude="{{user_longitude}}" latitude="{{user_latitude}}" scale="{{scale}}" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" circles="{{circles}}" bindmarkertap="markertap" show-location="true" polyline="{{polyline}}" bindregionchange="regionchange" bindcallouttap="callouttap" show-location style="width:100%; height:{{Height}}px;" 
+></map>

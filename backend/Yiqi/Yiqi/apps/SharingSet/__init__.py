@@ -1,0 +1,1 @@
+default_app_config = 'SharingSet.apps.SharingsetConfig'

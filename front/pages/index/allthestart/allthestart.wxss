@@ -1,0 +1,2 @@
+/* pages/index/allthestart/allthestart.wxss */
+@import '../../../templates/thenstart/thenstart.wxss';

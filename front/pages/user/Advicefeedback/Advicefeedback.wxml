@@ -1,0 +1,16 @@
+<!--pages/user/Advicefeedback/Advicefeedback.wxml-->
+<view class='feeback_view'>
+  <view class='feback_title_view'>
+    <input placeholder='反馈标题' maxlength='15' bindinput='title' value='{{title}}'></input>
+  </view>
+  <view class='feback_title_view'>
+    <textarea placeholder='反馈内容(反馈标题和内容，不能为空或包含多个空格)' bindinput='content' value='{{content}}'></textarea>
+  </view>
+  <view class='feeback_images_view'>
+    <text>选择图片(可选)</text>
+    <image mode="aspectFill" src="{{imagestempFilePaths?imagestempFilePaths:'../../../images/icon/addtianjia.png'}}" catchtap='UploadImage'></image>
+  </view>
+  <view class='feback_button_view'>
+    <button catchtap='feedback_post' disabled="{{feedback_post}}">提交反馈</button>
+  </view>
+</view>

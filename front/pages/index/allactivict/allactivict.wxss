@@ -1,0 +1,6 @@
+@import '../../../templates/allactivict/allactivict.wxss';
+@import '../../../templates/hotactivity/hotactivity.wxss';
+
+.hot_content_view1{
+  margin-top: 30rpx;
+}

@@ -1,0 +1,95 @@
+<!--评论模板  -->
+<template name="comments">
+  <view class='comment_view'>
+    <!--头部提示  -->
+    <view class='comment_view_top_view'>
+      <text>活动评论</text>
+      <view class='bott_xian_view'></view>
+    </view>
+    <!--头部提示  -->
+    <block wx:for="{{comments}}" wx:key>
+      <!--评论内容开始  -->
+      <view class='comments_start_views'>
+        <!--用户头像昵称，性别，地址，时间  -->
+        <view class='comments_start_user_info_view'>
+          <view class='comments_user_avact_view'>
+            <image mode="aspectFill" class='comments_user_avact' src='{{item.user_id.avatar}}'></image>
+          </view>
+          <view class='comments_user_text_info_view'>
+            <view class='comments_user_nkname_view'>
+              <text>{{item.user_id.name}}</text>
+              <!--'../../../../images/icon/male.png':'../../../../images/icon/female.png  -->
+              <image src="{{item.user_id.gender==1?'../../../images/icon/male.png':'../../../images/icon/female.png'}}"></image>
+            </view>
+            <view class='comments_user_address_date_view'>
+              <text>{{item.addtime}}</text>
+            </view>
+          </view>
+        </view>
+        <!--用户头像昵称，性别，地址，时间  -->
+        <!--评论内容  -->
+        <view class='comment_centent_view'>
+          <text>{{item.centent}}</text>
+        </view>
+        <!--评论内容  -->
+        <!--点赞，举报，回复  -->
+        <view class='comment_bottom_view'>
+          <view catchtap='' data-userid='{{item.user_id.id}}' data-hdplid='{{item.id}}'>
+            <text>举报</text>
+          </view>
+          <view catchtap='' data-userid='{{item.user_id.id}}' data-hdplid='{{item.id}}'>
+            <image src='../../../images/icon/dianzhan.png'></image>
+            <text>0</text>
+          </view>
+          <view catchtap='' data-userid='{{item.user_id.id}}' data-hdplid='{{item.id}}'>
+            <text>回复</text>
+          </view>
+        </view>
+        <!--点赞，举报，回复  -->
+        <!--如果下面有回复就显示  -->
+        <view class='commends_z'>
+          <view class='comments_start_views' wx:for="{{item.child}}" wx:for-item="child" wx:key>
+            <!--用户头像昵称，性别，地址，时间  -->
+            <view class='comments_start_user_info_view'>
+              <view class='comments_user_avact_view'>
+                <image mode="aspectFill" class='comments_user_avact' src='{{child.user_id.avatar}}'></image>
+              </view>
+              <view class='comments_user_text_info_view'>
+                <view class='comments_user_nkname_view'>
+                  <text>{{child.user_id.name}}</text>
+                  <!--'../../../../images/icon/male.png':'../../../../images/icon/female.png  -->
+                  <image src="{{child.user_id.gender==1?'../../../images/icon/male.png':'../../../images/icon/female.png'}}"></image>
+                </view>
+                <view class='comments_user_address_date_view'>
+                  <text>{{child.addtime}}</text>
+                </view>
+              </view>
+            </view>
+            <!--用户头像昵称，性别，地址，时间  -->
+            <!--评论内容  -->
+            <view class='comment_centent_view'>
+              <text>{{child.centent}}</text>
+            </view>
+            <!--评论内容  -->
+            <!--点赞，举报，回复  -->
+            <view class='comment_bottom_view'>
+              <view catchtap='' data-userid='{{child.user_id.id}}' data-hdplid='{{child.id}}'>
+                <text>举报</text>
+              </view>
+              <view catchtap='' data-userid='{{child.user_id.id}}' data-hdplid='{{child.id}}'>
+                <image src='../../../images/icon/dianzhan.png'></image>
+                <text>0</text>
+              </view>
+              <view catchtap='' data-userid='{{child.user_id.id}}' data-hdplid='{{child.id}}'>
+                <text>回复</text>
+              </view>
+            </view>
+            <!--点赞，举报，回复  -->
+          </view>
+        </view>
+        <!--如果下面有回复就显示  -->
+      </view>
+    </block>
+    <!--评论内容开始  -->
+  </view>
+</template>

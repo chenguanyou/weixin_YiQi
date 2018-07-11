@@ -1,0 +1,5 @@
+<!--pages/index/allthestart/allthestart.wxml-->
+<import src='../../../templates/thenstart/thenstart.wxml' />
+
+
+<template is='thestart_content' data="{{startDateList}}" />

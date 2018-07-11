@@ -1,0 +1,83 @@
+/* page/meuser/gerenxinxi/gerenxinxi.wxss */
+
+.gerenxinxi_view {
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+}
+
+.gerenxinxi_view_touxiang {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-bottom: 1rpx ridge #ededed;
+  padding-bottom: 10rpx;
+}
+
+.gerenxinxi_view_touxiang text {
+  line-height: 80rpx;
+  vertical-align: middle; /* 垂直居中 */
+}
+
+.gerenxinxi_view_touxiang_images {
+  float: right;
+}
+
+.gerenxinxi_view_touxiang_images text {
+  margin-right: 20rpx;
+}
+
+.touxiang_images {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 100rpx;
+  vertical-align: middle; /* 垂直居中 */
+  margin-right: 10rpx;
+}
+
+.touxiang_xiugaitishi {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle; /* 垂直居中 */
+}
+
+.gerenxinxi_view_touxiang_images_wx {
+  float: right;
+  margin-right: 40rpx;
+}
+
+.gerenxinxi_view_touxiang_images_sr {
+  line-height: 80rpx;
+}
+
+.USER_IDD {
+  font-size: 27rpx;
+}
+
+.value_thesignature_content {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.gerenxinxi_view_touxiangs {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-bottom: 1rpx ridge #ededed;
+  padding-bottom: 10rpx;
+}
+
+.henchang {
+  margin-right: 20rpx;
+  margin-left: 70rpx;
+  display: block;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

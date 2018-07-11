@@ -1,0 +1,6 @@
+<import src='../../../templates/allactivict/allactivict.wxml' />
+
+
+<!-- <scroll-view style="height:{{Height}}px;" lower-threshold="150" scroll-with-animation="true" scroll-y="true" bindscrolltolower="loadMore"> -->
+  <template is='allactivicts' data="{{all_data}}" />
+<!-- </scroll-view> -->

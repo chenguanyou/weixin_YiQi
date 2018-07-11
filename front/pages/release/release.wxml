@@ -1,0 +1,122 @@
+<!--pages/release/release.wxml-->
+<view class='release_view'>
+  <!--封面图片  -->
+  <view class='the_cover_view' catchtap='UploadImage_tap'>
+    <image src="{{the_cover}}" style='width:{{the_cover_wigth}}%;' mode="aspectFill" class='the_cover_view_images'></image>
+    <text class='the_cover_view_text' hidden='{{the_cover_view_text}}'>添加封面</text>
+  </view>
+  <!--封面图片  -->
+  <!--活动内容  -->
+  <view class='the_content_view'>
+    <view class='the_content_title_view'>
+      <image src='../../images/icon/faqititle.png'></image>
+      <input placeholder='活动标题' bindinput='the_content_title' value='{{the_content_title}}'></input>
+    </view>
+    <view class='the_content_content'>
+      <textarea maxlength='500' placeholder='填写活动的内容，让更多的小伙伴参加活动吧！(标题内容不能包含多个空格，不能包含特殊字符)' bindinput='the_content_content' value='{{the_content_content}}'></textarea>
+    </view>
+    <view class='the_content_add_images_view'>
+      <block wx:for="{{the_content_add_images}}" wx:key>
+        <image src='{{item}}' mode="aspectFill" hidden='{{the_content_add_images1}}' data-src='{{item}}' data-index='{{index}}' bindlongpress="deleteImage" catchtap='previewImage'></image>
+      </block>
+      <image src='../../images/icon/addimages.png' mode="aspectFill" hidden='{{the_content_add_images2}}' catchtap='the_content_add_images'></image>
+      <text>{{the_content_add_images_num}}/9</text>
+    </view>
+  </view>
+  <!--活动内容  -->
+  <!--开始时间结束时间  -->
+  <view class='release_start_data_view'>
+    <image src='../../images/icon/datestart.png' class='release_start_data_view_image'></image>
+    <text class='release_start_data_view_text'>活动开始时间</text>
+    <view class='release_start_data_view_right'>
+      <picker class='release_start_data_view_data' mode="date" value="{{startdate}}" start="{{printdate}}" bindchange="bindDateChangess1">
+        <text class='release_start_data_view_data'>{{startdate}}</text>
+        <image src='../../images/icon/nextbm.png' class='release_start_data_view_image1'></image>
+      </picker>
+    </view>
+  </view>
+  <view class='release_start_data_view'>
+    <image src='../../images/icon/dateend.png' class='release_start_data_view_image'></image>
+    <text class='release_start_data_view_text'>活动结束时间</text>
+    <view class='release_start_data_view_right'>
+      <picker class='release_start_data_view_data' mode="date" value="{{enddate}}" start="{{startdate}}" bindchange="bindDateChangess2">
+        <text class='release_start_data_view_data'>{{enddate}}</text>
+        <image src='../../images/icon/nextbm.png' class='release_start_data_view_image1'></image>
+      </picker>
+    </view>
+  </view>
+  <!--开始时间结束时间  -->
+  <!--活动地点  -->
+  <view class='address_view'>
+    <image src='../../images/icon/ditu.png'></image>
+    <text>活动地点</text>
+    <view class='address' catchtap='address'>
+      <text>{{address_name}}</text>
+      <image src='../../images/icon/nextbm.png'></image>
+    </view>
+  </view>
+  <!--活动地点  -->
+  <!--活动类别  -->
+  <view class='address_view'>
+    <image src='../../images/icon/allactivict.png'></image>
+    <text>活动类别</text>
+    <view class='address'>
+      <picker class='gerenxinxi_view_touxiang_images_sr' range='{{ActivityType}}' range-key="{{'name'}}"  value="{{id}}"  bindchange="release_type">
+        <text>{{release_type}}</text>
+        <image src='../../images/icon/nextbm.png'></image>
+      </picker>
+    </view>
+  </view>
+  <!--活动类别  -->
+  <!--限制人数  -->
+  <view class='user_name_view'>
+    <image src='../../images/icon/xianzhirenshu.png'></image>
+    <text>限制人数</text>
+    <view>
+      <input placeholder='限制人数' maxlength='4' type='number' bindinput='number2' value='{{number2}}'></input>
+      <image src='../../images/icon/nextbm.png'></image>
+    </view>
+  </view>
+  <!--限制人数  -->
+  <!--活动的个人信息填写  -->
+  <view class='user_infos'>
+
+    <view class='user_name_view'>
+      <image src='../../images/icon/username.png'></image>
+      <text>真实姓名</text>
+      <view>
+        <input placeholder='您的姓名' maxlength='3' bindinput='this_name' value='{{that_name}}'></input>
+        <image src='../../images/icon/nextbm.png'></image>
+      </view>
+    </view>
+
+    <view class='user_name_view'>
+      <image src='../../images/icon/wechat.png'></image>
+      <text>微信号码</text>
+      <view>
+        <input placeholder='您的微信号' maxlength='20' bindinput='that_wechat' value='{{that_wechat}}'></input>
+        <image src='../../images/icon/nextbm.png'></image>
+      </view>
+    </view>
+
+    <view class='qr_code_view' bindtap='qr_images'>
+      <image src='{{qr_images}}' mode="aspectFill" ></image>
+      <text>上传群活动二维码(可选)</text>
+    </view>
+  </view>
+  <!--活动的个人信息填写  -->
+  <!--阅读协议选项  -->
+  <view class='yueduxieyi_view'>
+    <checkbox-group catchtap="checkboxChange">
+      <label class="checkbox">
+        <checkbox value="" checked="" />
+        <text>阅读并同意</text>
+        <text class='xieyi' catchtap="yuedu">《协议须知》</text>
+      </label>
+    </checkbox-group>
+  </view>
+  <!--阅读协议选项  -->
+  <!--发布活动  -->
+  <button class='get_initiate' disabled='{{get_initiate}}' bindtap='Launch_event'>发起活动</button>
+  <!--发布活动  -->
+</view>

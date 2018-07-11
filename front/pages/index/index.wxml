@@ -1,0 +1,60 @@
+<import src='../../templates/thenstart/thenstart.wxml' />
+<import src='../../templates/hotactivity/hotactivity.wxml' />
+<import src='../../templates/allactivict/allactivict.wxml' />
+<import src='../../templates/classification/classification.wxml' />
+<import src='../../templates/themap/themap.wxml' />
+<!--index.wxml-->
+<view class="container" hidden='{{view_hidden}}'>
+  <!--幻灯片  -->
+  <view class='slide_view'>
+    <!--搜索活动  -->
+    <view class='search_activity0'>
+      <view class='search_activity'>
+        <image src='../../images/icon/search_index.png' class='search_images'></image>
+        <input placeholder='搜索活动' value='{{search_text}}' maxlength='50' confirm-type='search' class='search_input' bindconfirm="search_input"></input>
+      </view>
+      <view class='search_activity1' catchtap='mapmode'>
+        <image src='../../images/icon/huodong.png' class='search_images1'></image>
+      </view>
+    </view>
+    <!--搜索活动  -->
+    <!--幻灯片图片  -->
+    <swiper indicator-dots='true' indicator-color='#FFFFFF' indicator-active-color='#eb4901' autoplay='true' circular='true'>
+      <block wx:for='{{SlideImage}}' wx:key>
+        <swiper-item>
+          <image mode='aspectFill' data-activityid='{{item.activity}}' catchtap='xiangqing' src='{{item.image}}' class='slide_images'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!--幻灯片图片  -->
+  </view>
+  <!--幻灯片  -->
+
+  <!--地图看活动  -->
+  <!-- <template is='themap' /> -->
+  <!--地图看活动  -->
+
+  <!--即将开始的活动  -->
+  <view hidden='{{startDateListis}}'>
+    <template is='the_start' data="{{startDateList}}" />
+  </view>
+  <!--即将开始的活动  -->
+
+  <!--分类活动  -->
+  <view hidden='{{ActivityTypeis}}'>
+    <template is='classification' data="{{ActivityType}}" />
+  </view>
+  <!--分类活动  -->
+
+  <!--热门活动  -->
+  <view hidden='{{Registration_datais}}'>
+    <template is='hotactivity' data="{{Registration_data}}" />
+  </view>
+  <!--热门活动  -->
+
+  <!--全部活动 -->
+  <view hidden='{{all_datais}}'>
+    <template is='allactivict' data="{{all_data}}" />
+  </view>
+  <!--全部活动  -->
+</view>

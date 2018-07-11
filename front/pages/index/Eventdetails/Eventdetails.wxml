@@ -1,0 +1,187 @@
+<!--pages/index/Eventdetails/Eventdetails.wxml-->
+<import src='../../../templates/comment/comment.wxml' />
+<view class='Eventdetails_view'>
+  <!--顶部  -->
+  <view class='Eventdetails_tou_view'>
+    <image mode="aspectFill" src='{{cover_image}}'></image>
+  </view>
+  <view class="Eventdetails_start_end_view">
+    <image src="{{judgeStartEnd==true?'../../../images/icon/startdates.png':'../../../images/icon/enddates.png'}}"></image>
+  </view>
+  <view class='Eventdetails_tou_text_view'>
+    <text>已报名</text>
+    <text>{{registration_number}}</text>
+    <text>/{{limitnum}}</text>
+  </view>
+  <!--顶部  -->
+  <!--报名表单弹框  -->
+  <modal id="modal" hidden="{{hiddenmodalput}}" catchtouchmove='true' title="报名信息填写" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input style='margin-top:20rpx;' type='text' adjust-position="true" bindinput='baoming_name' cursor-spacing='70' value='{{baoming_name}}' placeholder="输入您的姓名" />
+    <input type='text' adjust-position="true" style='margin-top:40rpx;' bindinput='baoming_wechatid' cursor-spacing='70' value='{{baoming_wechatid}}' placeholder="输入您的微信号" />
+  </modal>
+  <!--报名表单弹框  -->
+  <!--举报弹框  -->
+  <modal id="modal" hidden="{{jubaoinput}}" title="举报活动" catchtouchmove='true' confirm-text="举报" cancel-text="取消" bindcancel="jubaocancel" bindconfirm="jubaoconfirm">
+    <textarea style='margin-top:20rpx;' type='text' fixed="true" adjust-position="true" class='jubaoinput_content' bindinput='jubaoinput_content' cursor-spacing='70' value='{{jubaoinput_content}}' placeholder="输入您的举报理由，不能包含特殊字符，不能包含多个空格！" />
+  </modal>
+  <!--举报弹框  -->
+  <!--分享，报名，收藏  -->
+  <view class='Eventdetails_tool_view'>
+    <view catchtap="baoming_tap" data-id='{{id}}'>
+      <image src='../../../images/icon/shijiaoorder.png'></image>
+      <text>报名</text>
+    </view>
+     <view  catchtap='qunliao'>
+      <image src='../../../images/icon/goutong.png'></image>
+      <text>群聊</text>
+    </view> 
+    <view catchtap='ClooectionViewSet'>
+      <image src="{{callections.callections==true?'../../../images/icon/kaorder.png':'../../../images/icon/kaorder0.png'}}"></image>
+      <text>收藏</text>
+    </view>
+    <view catchtap='jubaoinput'>
+      <image src='../../../images/icon/jubao.png'></image>
+      <text>举报</text>
+    </view>
+    <view catchtap='fenxiang_tap'>
+      <image src='../../../images/icon/fenxiang.png'></image>
+      <text>分享</text>
+    </view>
+  </view>
+  <!--分享，报名， 收藏  -->
+  <!--分享跳转  -->
+
+  <!--分享二维码图片弹框  -->
+  <view class='sharing_view' hidden='{{sharing_view}}' catchtouchmove='true'>
+    <canvas style="width:740rpx;height:940rpx;position: absolute;z-index:20001;" canvas-id="myCanvas" />
+    <view class='save_shareing_image' catchtap='save_shareing_image' style="{{res_screenHeight >= 800?'bottom:240rpx;':'bottom:40rpx;'}}">
+      <text>保存到相册，分享给好友吧！{{res_windowHeight}}</text>
+    </view>
+    <view class="mask" catchtap="outbtn" wx:if="{{showModal}}"></view>
+  </view>
+  <!--分享二维码图片弹框  -->
+
+  <!--活动名称  -->
+  <view class='Event_details_view'>
+    <image src='../../../images/icon/name.png'></image>
+    <text>活动名称</text>
+    <view>
+      <text class='Event_details_view_name'>{{title}}</text>
+    </view>
+  </view>
+  <!--活动名称  -->
+  <!--活动类别  -->
+  <view class='Event_details_view'>
+    <image src='../../../images/icon/allactivicts.png'></image>
+    <text>活动类别</text>
+    <view>
+      <text class='Event_details_view_name'>{{activitytype}}</text>
+    </view>
+  </view>
+  <!--活动类别  -->
+  <!--活动类别  -->
+  <view class='Event_details_view'>
+    <image src='../../../images/icon/datestart.png'></image>
+    <text>开始时间</text>
+    <view>
+      <text class='Event_details_view_name'>{{startdate}}</text>
+    </view>
+  </view>
+  <!--活动类别  -->
+  <!--活动类别  -->
+  <view class='Event_details_view'>
+    <image src='../../../images/icon/dateend.png'></image>
+    <text>结束时间</text>
+    <view>
+      <text class='Event_details_view_name'>{{enddate}}</text>
+    </view>
+  </view>
+  <!--活动类别  -->
+  <!--活动详情  -->
+  <view class='Event_details_view'>
+    <image src='../../../images/icon/ditus.png'></image>
+    <text>活动位置</text>
+    <view catchtap='ToAddress' data-address='{{address}}' data-latitude='{{latitude}}' data-longitude='{{longitude}}' data-title='{{title}}' data-id='{{id}}'>
+      <text data-address='{{address}}' data-latitude='{{latitude}}' data-longitude='{{longitude}}'>查看地图</text>
+      <image src="../../../images/icon/nextbm.png"></image>
+    </view>
+  </view>
+  <!--活动详情  -->
+
+  <!--活动详情  -->
+  <view class='Event_details_view'>
+    <image src='../../../images/icon/xiangqing.png'></image>
+    <text>活动详情</text>
+    <view catchtap='hdDdetails'>
+      <text>查看</text>
+      <image src="../../../images/icon/nextbm.png"></image>
+    </view>
+  </view>
+  <!--活动详情  -->
+
+  <!--已报名  -->
+  <view class='Havetosignup_views' wx:if="{{register.length!=0}}">
+    <view class='Havetosignup_yibaoming'>
+      <text>已报名</text>
+      <text>{{registration_number}}/{{limitnum}}</text>
+    </view>
+    <view class='Havetosignup_user_view' catchtap='baominguser_tap'>
+      <view class='Havetosignup_user_image'>
+        <block wx:for="{{register}}" wx:key>
+          <image mode="aspectFill" src='{{item.user.avatar}}' wx:if="{{index<=6}}"></image>
+        </block>
+      </view>
+      <view class='Havetosignup_user_image1'>
+        <image src="../../../images/icon/nextbm.png"></image>
+      </view>
+    </view>
+  </view>
+  <!--已报名  -->
+  <!--显示活动发起人的姓名和微信和活动群二维码，只对已报名用户查看  -->
+  <view class='Eventdetails_userinfo_view'>
+    <view class='Eventdetails_user_name'>
+      <view class='Eventdetails_user_title_view'>
+        <image src='../../../images/icon/username.png'></image>
+        <text>活动发起人姓名:</text>
+      </view>
+      <view class='Eventdetails_user_names'>
+        <text>{{username}}</text>
+      </view>
+    </view>
+
+    <view class='Eventdetails_user_name'>
+      <view class='Eventdetails_user_title_view'>
+        <image src='../../../images/icon/wechat.png'></image>
+        <text>活动发起人微信:</text>
+      </view>
+      <view class='Eventdetails_user_names'>
+        <text selectable='true'>{{wechat}}</text>
+      </view>
+    </view>
+
+    <view class='Eventdetails_user_name' hidden="{{groupcode_none}}">
+      <view class='Eventdetails_user_title_view'>
+        <image src='../../../images/icon/erweima.png'></image>
+        <text>活动发人群二维码:</text>
+      </view>
+      <view class='Eventdetails_user_names' catchtap='callections_tap'>
+        <text catchtap='erweima_cat' wx:if="{{groupcode!=false}}">点击查看</text>
+        <text wx:if="{{groupcode==false}}">报名后查看</text>
+      </view>
+    </view>
+
+    <!--分享二维码图片弹框  -->
+    <view class='sharing_view' hidden='{{sharing_views}}'  wx:if="{{groupcode!=false}}" catchtouchmove='true'>
+      <view class='user_info_view'>
+        <image src='{{groupcode}}' mode="aspectFill"></image>
+      </view>
+      <view class="mask" catchtap="outbtns" wx:if="{{showModal}}"></view>
+    </view>
+    <!--分享二维码图片弹框  -->
+  </view>
+  <!--显示活动发起人的姓名和微信和活动群二维码，只对已报名用户查看  -->
+
+  <!--评论开始  -->
+  <!-- <template is="comments" data='{{comments}}'/> -->
+  <!--评论结束  -->
+</view>

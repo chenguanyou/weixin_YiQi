@@ -1,0 +1,58 @@
+<template name='hotactivity'>
+  <view class='hotactivity_views'>
+    <!--即将开始提示  -->
+    <view class='hotactivity_view'>
+      <image src='../../images/icon/hotactivity.png' class='hotactivity_start_image'></image>
+      <text class='hotactivity_start_text'>热门活动</text>
+      <image src='../../images/icon/right_image.png' class='hotactivity_right_image' catchtap='allhotactivity'></image>
+    </view>
+    <!--即将开始提示  -->
+    <view class='hot_content_view'>
+      <!--热门活动开始1  -->
+      <block wx:for='{{Registration_data.length}}' wx:key wx:if="{{item<2}}">
+        <view class='hot_content_view1'>
+          <!--热门活动左  -->
+          <view class='hot_content' wx:for="{{Registration_data[item]}}" wx:if="{{Registration_data[item]}}" wx:key style="{{index%2!=0?'margin-left:20rpx;':'margin-right:20rpx;'}}" wx:for-item="items" catchtap='xiangqing' data-activityid='{{items.id}}'>
+            <view class='start_content_image10'>
+              <image src="{{items.judgeStartEnd!=false?'../../images/icon/startdates.png':'../../images/icon/enddates.png'}}"></image>
+            </view>
+            <image mode='aspectFill' src='{{items.cover_image}}' class='hot_content_image'></image>
+            <view class='hot_content_text_view'>
+              <text class='hot_content_text_1'>{{items.title}}</text>
+              <text class='hot_content_text_2'>有{{items.registration_number}}个小伙伴参加</text>
+            </view>
+          </view>
+          <!--热门活动左  -->
+        </view>
+      </block>
+      <!--热门活动开始1  -->
+    </view>
+    <!--分割线  -->
+    <view class='fengexian'></view>
+    <!--分割线  -->
+  </view>
+</template>
+
+<template name='allhotactivity'>
+  <!--热门活动开始1  -->
+  <block wx:for='{{Registration_data.length}}'>
+    <view class='hot_content_view1' style="{{Registration_data[item].length == 1? 'display:flex; flex-direction:row; justify-content:none; margin-left:20rpx;':'justify-content:center;'}}">
+      <!--热门活动左  -->
+      <view class='hot_content' wx:for="{{Registration_data[item]}}" wx:if="{{Registration_data[item]}}" wx:key style="{{index%2!=0?'margin-left:20rpx;':'margin-right:20rpx;'}}" wx:for-item="items" catchtap='xiangqing' data-activityid='{{items.id}}'>
+        <view class='start_content_image10'>
+          <image src="{{items.judgeStartEnd!=false?'../../../images/icon/startdates.png':'../../../images/icon/enddates.png'}}"></image>
+        </view>
+        <image mode='aspectFill' src='{{items.cover_image}}' class='hot_content_image'></image>
+        <view class='hot_content_text_view'>
+          <text class='hot_content_text_1'>{{items.title}}</text>
+          <text class='hot_content_text_2'>有{{items.registration_number}}个小伙伴参加</text>
+        </view>
+      </view>
+      <!--热门活动左  -->
+    </view>
+  </block>
+  <!--热门活动开始1  -->
+  <!--分割线  -->
+  <view class='fengexian'></view>
+  <!--分割线  -->
+</template>
