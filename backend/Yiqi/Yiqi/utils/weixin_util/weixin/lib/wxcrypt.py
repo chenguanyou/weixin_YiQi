@@ -1,12 +1,12 @@
-# -*- coding:utf-8 -*-
-
 """
 对小程序获取的用户信息解密代码.
 """
+
 import base64
+import json
 from Crypto.Cipher import AES
 
-from utils.weixin_util.weixin.json_import import simplejson as json
+# from util.weixin_util.weixin.json_import import simplejson as json
 
 
 class WXBizDataCrypt:
@@ -28,7 +28,9 @@ class WXBizDataCrypt:
         iv = base64.b64decode(iv)
 
         cipher = AES.new(session_key, AES.MODE_CBC, iv)
-        decrypted = json.loads(self._unpad(cipher.decrypt(encrypted_data)))
+        user_data = self._unpad(cipher.decrypt(encrypted_data))
+        str1 = str(user_data, encoding="utf-8")
+        decrypted = eval(str1)
 
         if decrypted['watermark']['appid'] != self.appid:
             raise Exception('Invalid Buffer')
@@ -36,4 +38,4 @@ class WXBizDataCrypt:
         return decrypted
 
     def _unpad(self, s):
-        return s[:-ord(s[len(s) - 1:])]
+        return s[:-ord(s[len(s)-1:])]
