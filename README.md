@@ -28,6 +28,8 @@
 
 <img src="./screenshots/7.gif" width="25%" />
 
+      
+
 项目配置
 ===
 >1.配置你的小程序ID和SECRET，在sys_info内<br/>
