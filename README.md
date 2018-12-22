@@ -3,6 +3,7 @@
 >项目启动页面(以下Gif演示有点失真，抱歉！)
 
 ![Alt text](./screenshots/1.gif)<br/>
+<img src="./screenshots/1.gif" width="25%" />
 
 >项目活动页面
 
