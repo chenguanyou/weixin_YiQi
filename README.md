@@ -2,32 +2,31 @@
 ===
 >项目启动页面(以下Gif演示有点失真，抱歉！)
 
-![Alt text](./screenshots/1.gif)<br/>
 <img src="./screenshots/1.gif" width="25%" />
 
 >项目活动页面
 
-![Alt text](./screenshots/2.gif)<br/>
+<img src="./screenshots/2.gif" width="25%" />
 
 >项目地图页面
 
-![Alt text](./screenshots/3.gif)<br/>
+<img src="./screenshots/3.gif" width="25%" />
 
 >项目活动详情页面
 
-![Alt text](./screenshots/4.gif)<br/>
+<img src="./screenshots/4.gif" width="25%" />
 
 >项目活动发布页面
 
-![Alt text](./screenshots/5.gif)<br/>
+<img src="./screenshots/5.gif" width="25%" />
 
 >项目消息页面
 
-![Alt text](./screenshots/6.gif)<br/>
+<img src="./screenshots/6.gif" width="25%" />
 
 >项目个人中心页面
 
-![Alt text](./screenshots/7.gif)<br/>
+<img src="./screenshots/7.gif" width="25%" />
 
 项目配置
 ===
