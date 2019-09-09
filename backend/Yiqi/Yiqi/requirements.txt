@@ -150,7 +150,7 @@ wcwidth==0.1.7
 web.py==0.40.dev0
 webencodings==0.5.1
 wechatpy==1.6.0
-Werkzeug==0.13
+Werkzeug==0.15.3
 xlrd==1.1.0
 xlwt==1.3.0
 xmltodict==0.11.0
