@@ -29,7 +29,7 @@ decorator==4.2.1
 defusedxml==0.5.0
 diff-match-patch==20121119
 dj-database-url==0.5.0
-Django==1.11.7
+Django==1.11.29
 django-autoslug==1.9.3
 django-cors-headers==2.1.0
 django-crispy-forms==1.7.0
