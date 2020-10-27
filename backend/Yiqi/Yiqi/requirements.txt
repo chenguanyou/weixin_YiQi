@@ -21,7 +21,7 @@ coreapi==2.3.3
 coreschema==0.0.4
 coverage==4.4.2
 crypto==1.4.1
-cryptography==2.1.4
+cryptography==3.2
 cssselect==1.0.1
 cycler==0.10.0
 daphne==1.4.2
