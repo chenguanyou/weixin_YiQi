@@ -114,7 +114,7 @@ python-decouple==3.1
 python-memcached==1.59
 python3-openid==3.1.0
 pytz==2017.3
-PyYAML==3.12
+PyYAML==5.4
 queuelib==1.4.2
 redis==2.10.6
 reload==0.9
