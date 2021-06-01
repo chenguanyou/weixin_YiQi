@@ -139,7 +139,7 @@ txaio==2.9.0
 unicodecsv==0.14.1
 Unipath==1.1
 uritemplate==3.0.0
-urllib3==1.22
+urllib3==1.26.5
 uWSGI==2.0.15
 virtualenv==15.1.0
 virtualenv-clone==0.2.6
