@@ -102,7 +102,7 @@ pycryptodome==3.6.0
 PyDispatcher==2.0.5
 pygame==1.9.3
 Pygments==2.2.0
-PyJWT==1.6.1
+PyJWT==2.4.0
 PyMySQL==0.8.0
 pyOpenSSL==17.5.0
 pyparsing==2.2.0
