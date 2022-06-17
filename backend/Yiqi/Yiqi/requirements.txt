@@ -121,7 +121,7 @@ reload==0.9
 requests==2.18.4
 requests-oauthlib==0.8.0
 rncryptor==3.2.0
-Scrapy==1.4.0
+Scrapy==2.6.1
 service-identity==17.0.0
 shellescape==3.4.1
 simplegeneric==0.8.1
